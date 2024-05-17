@@ -22,6 +22,13 @@ export default function App({ Component }: PageProps) {
           href="https://esm.sh/prismjs@1.29.0/themes/prism.min.css"
         >
         </link>
+        {
+          <link
+            rel="stylesheet"
+            href="https://esm.sh/wysiwyg.css/wysiwyg.css"
+          >
+          </link>
+        }
       </head>
       <body>
         <Component />

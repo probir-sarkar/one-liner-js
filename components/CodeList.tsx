@@ -26,7 +26,14 @@ const CodeList = (props: CodeListProps) => {
               {oneLiner.title}
             </h2>
             <CodeSnippet code={oneLiner.code} lang="javascript" />
-            <p>{oneLiner.description}</p>
+            <div class="wysiwyg">
+              <p
+                dangerouslySetInnerHTML={oneLiner.description
+                  ? { __html: oneLiner.description }
+                  : { __html: "" }}
+              >
+              </p>
+            </div>
           </div>
         ))}
       </div>
