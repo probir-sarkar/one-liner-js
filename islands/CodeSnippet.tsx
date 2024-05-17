@@ -1,24 +1,20 @@
-import { useEffect } from "preact/hooks";
-import hljs from "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js";
+import Prism from "https://esm.sh/prismjs@1.29.0";
 
-interface CodeSnippetProps {
+interface Props {
   code: string;
+  lang: string;
 }
 
-const CodeSnippet = ({ code }: CodeSnippetProps) => {
-  useEffect(() => {
-    // Highlight all code blocks
-    hljs.highlightAll();
-  }, []);
-
-  // Generate highlighted HTML for the given code
-  const html = hljs.highlight(code, { language: "javascript" }).value;
+export default function Code({ code, lang }: Props) {
+  const parsed = Prism.highlight(code, Prism.languages[lang], lang);
 
   return (
-    <pre>
-      <code class={`hljs language-javascript`} dangerouslySetInnerHTML={{ __html: html }} />
+    <pre data-lang={lang} className={`language-${lang}`}>
+      <code
+        dangerouslySetInnerHTML={{
+          __html: parsed,
+        }}
+      />
     </pre>
   );
-};
-
-export default CodeSnippet;
+}

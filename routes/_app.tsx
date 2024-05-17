@@ -19,18 +19,20 @@ export default function App({ Component }: PageProps) {
         <link rel="stylesheet" href="/styles.css" />
         <link
           rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+          href="https://esm.sh/prismjs@1.29.0/themes/prism.min.css"
         >
         </link>
-        {
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css"
-          />
-        }
       </head>
       <body>
         <Component />
+        <a class="float-end sticky bottom-0" href="https://fresh.deno.dev">
+          <img
+            width="197"
+            height="37"
+            src="https://fresh.deno.dev/fresh-badge.svg"
+            alt="Made with Fresh"
+          />
+        </a>
       </body>
     </html>
   );

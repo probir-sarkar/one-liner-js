@@ -1,4 +1,3 @@
-import { FreshContext } from "$fresh/server.ts";
 import CodeSnippet from "@/islands/CodeSnippet.tsx";
 interface OneLiner {
   id: number;
@@ -26,7 +25,7 @@ const CodeList = (props: CodeListProps) => {
               {". "}
               {oneLiner.title}
             </h2>
-            <CodeSnippet code={oneLiner.code} />
+            <CodeSnippet code={oneLiner.code} lang="javascript" />
             <p>{oneLiner.description}</p>
           </div>
         ))}
