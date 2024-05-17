@@ -52,14 +52,34 @@ export default function App({ Component }: PageProps) {
       </head>
       <body>
         <Component />
-        <a class="float-end sticky bottom-0" href="https://fresh.deno.dev">
-          <img
-            width="197"
-            height="37"
-            src="https://fresh.deno.dev/fresh-badge.svg"
-            alt="Made with Fresh"
-          />
-        </a>
+        <div class="w-full justify-center md:justify-end md:sticky bottom-0 flex gap-2 items-center">
+          {/* for github */}
+          <a
+            href="https://github.com/probir-sarkar/one-liner-js"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              width="28"
+              height="28"
+              src="/github-mark.svg"
+              alt="GitHub Repository"
+            />
+          </a>
+
+          <a
+            href="https://fresh.deno.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              width="197"
+              height="37"
+              src="https://fresh.deno.dev/fresh-badge.svg"
+              alt="Made with Fresh"
+            />
+          </a>
+        </div>
       </body>
     </html>
   );
