@@ -5,7 +5,17 @@ export default function App({ Component }: PageProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>one-liner</title>
+        <meta name="language" content="en" />
+        <meta
+          name="description"
+          content="A collection of one-liner JavaScript snippets for your next project"
+        />
+        <meta
+          name="keywords"
+          content="programming, code, snippets, one-liners,javascript"
+        />
+
+        <title>One-Liner JavaScript Snippets</title>
         <link rel="stylesheet" href="/styles.css" />
         <link
           rel="stylesheet"

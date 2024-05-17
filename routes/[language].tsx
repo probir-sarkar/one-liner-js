@@ -1,7 +1,7 @@
 // import ... from 'https://unpkg.com/@speed-highlight/core/dist/index.js'
 
 import { FreshContext } from "$fresh/server.ts";
-import CodeSnippet from "../../islands/CodeSnippet.tsx";
+import CodeSnippet from "@/islands/CodeSnippet.tsx";
 interface OneLiner {
   id: number;
   status: "published" | "draft" | "archived";
