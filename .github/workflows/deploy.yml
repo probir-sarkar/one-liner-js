@@ -29,6 +29,6 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "one-liner-code"
+          project: "one-liner-js"
           entrypoint: "main.ts"
           root: "."
