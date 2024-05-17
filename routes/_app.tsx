@@ -24,7 +24,11 @@ export default function App({ Component }: PageProps) {
           property="og:description"
           content="A collection of one-liner JavaScript snippets for your next project"
         />
+        <meta property="og:image:type" content="image/jpg" />
         <meta property="og:image" content="/og.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="One-Liner JavaScript Snippets" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="one-liner-js.deno.dev" />
