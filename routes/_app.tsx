@@ -16,6 +16,26 @@ export default function App({ Component }: PageProps) {
         />
 
         <title>One-Liner JavaScript Snippets</title>
+
+        <meta property="og:url" content="https://one-liner-js.deno.dev/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="One-Liner JavaScript Snippets" />
+        <meta
+          property="og:description"
+          content="A collection of one-liner JavaScript snippets for your next project"
+        />
+        <meta property="og:image" content="/og.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="one-liner-js.deno.dev" />
+        <meta property="twitter:url" content="https://one-liner-js.deno.dev/" />
+        <meta name="twitter:title" content="One-Liner JavaScript Snippets" />
+        <meta
+          name="twitter:description"
+          content="A collection of one-liner JavaScript snippets for your next project"
+        />
+        <meta name="twitter:image" content="/og.jpg" />
+
         <link rel="stylesheet" href="/styles.css" />
         <link
           rel="stylesheet"
