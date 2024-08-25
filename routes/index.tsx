@@ -1,12 +1,7 @@
-import { getOneLiners } from "@/utils/actions.ts";
 import { join } from "$std/path/mod.ts";
 import {  render } from "$gfm";
 
 export default async function Home() {
-  const oneLiners = await getOneLiners();
-  if (!oneLiners.success || !oneLiners.data) {
-    return <div>Error fetching one-liners</div>;
-  }
   const code = await Deno.readTextFile(join(Deno.cwd(), "README.md"));
 
   return (
