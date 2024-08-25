@@ -3,7 +3,7 @@ import { CSS } from "$gfm";
 import { GitHubIcon } from "@/components/Icons.tsx";
 export default function App({ Component }: PageProps) {
   return (
-    <html>
+    <html lang="en">
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,6 +53,7 @@ export default function App({ Component }: PageProps) {
             href="https://github.com/probir-sarkar/one-liner-js"
             target="_blank"
             rel="noopener noreferrer"
+            alt="GitHub Repository"
           >
             {
               /* <img
