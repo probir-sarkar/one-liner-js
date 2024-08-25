@@ -1,11 +1,13 @@
-import CodeList from "@/components/CodeList.tsx";
 import { getOneLiners } from "@/utils/actions.ts";
+import { join } from "$std/path/mod.ts";
+import {  render } from "$gfm";
 
 export default async function Home() {
   const oneLiners = await getOneLiners();
   if (!oneLiners.success || !oneLiners.data) {
     return <div>Error fetching one-liners</div>;
   }
+  const code = await Deno.readTextFile(join(Deno.cwd(), "README.md"));
 
   return (
     <>
@@ -26,8 +28,13 @@ export default async function Home() {
           </p>
         </div>
       </header>
-      <main>
-        <CodeList oneLiners={oneLiners.data} />
+      <main className=" w-10/12 xl:max-w-4xl my-12 mx-auto ">
+        <div
+         data-color-mode="auto" data-light-theme="light" data-dark-theme="dark"
+          className="markdown-body"
+          dangerouslySetInnerHTML={{ __html: render(code) }}
+        >
+        </div>
       </main>
     </>
   );

@@ -1,4 +1,6 @@
 import { type PageProps } from "$fresh/server.ts";
+import { CSS } from "$gfm";
+import { GitHubIcon } from "@/components/Icons.tsx";
 export default function App({ Component }: PageProps) {
   return (
     <html>
@@ -41,34 +43,27 @@ export default function App({ Component }: PageProps) {
         <meta name="twitter:image" content="/og.jpg" />
 
         <link rel="stylesheet" href="/styles.css" />
-        <link
-          rel="stylesheet"
-          href="https://esm.sh/prismjs@1.29.0/themes/prism.min.css"
-        >
-        </link>
-        {
-          <link
-            rel="stylesheet"
-            href="https://esm.sh/wysiwyg.css/wysiwyg.css"
-          >
-          </link>
-        }
+        <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </head>
-      <body>
+      <body className="dark:bg-[#0d1117]">
         <Component />
-        <div class="w-full justify-center md:justify-end md:sticky bottom-0 flex gap-2 items-center">
+        <div class=" w-full justify-center md:justify-end md:sticky bottom-0 flex gap-2 items-center">
           {/* for github */}
           <a
             href="https://github.com/probir-sarkar/one-liner-js"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            {
+              /* <img
               width="28"
               height="28"
               src="/github-mark.svg"
               alt="GitHub Repository"
-            />
+              className="fill-white"
+            /> */
+            }
+            <GitHubIcon />
           </a>
 
           <a
