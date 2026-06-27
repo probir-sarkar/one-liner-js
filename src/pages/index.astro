@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import * as doc from "../../README.md";
+---
+
+<Layout
+  title="One-Liner JavaScript Snippets"
+  description="A collection of one-liner JavaScript snippets for your next project"
+>
+  <header class="px-4 py-8 mx-auto bg-[#86efac]">
+    <div class="max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <img class="my-6" src="/logo.svg" width="128" height="128" alt="Logo" />
+      <h1 class="text-4xl font-bold">One-Liner JavaScript Snippets</h1>
+      <p class="my-4">A collection of one-liner JavaScript snippets for your next project</p>
+    </div>
+  </header>
+
+  <main class="w-10/12 xl:max-w-4xl my-12 mx-auto">
+    <doc.Content />
+  </main>
+</Layout>
