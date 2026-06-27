@@ -5,11 +5,11 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-import GitHubIcon from '../components/GitHubIcon.astro';
+import GitHubIcon from "../components/GitHubIcon.astro";
 import "../styles/global.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -21,7 +21,7 @@ import "../styles/global.css";
     <title>{title}</title>
 
     <!-- Open Graph -->
-    <meta property="og:url" content="https://one-liner-js.deno.dev/" />
+    <meta property="og:url" content="https://one-liner-js.probir.dev/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -33,13 +33,11 @@ import "../styles/global.css";
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="one-liner-js.deno.dev" />
-    <meta property="twitter:url" content="https://one-liner-js.deno.dev/" />
+    <meta property="twitter:domain" content="one-liner-js.probir.dev" />
+    <meta property="twitter:url" content="https://one-liner-js.probir.dev/" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="/og.jpg" />
-
-    <link rel="stylesheet" href="/github-markdown.css" />
   </head>
   <body class="dark:bg-[#0d1117]">
     <slot />
