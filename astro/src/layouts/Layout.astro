@@ -1,0 +1,58 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+import GitHubIcon from '../components/GitHubIcon.astro';
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="language" content="en" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="programming, code, snippets, one-liners,javascript" />
+
+    <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://one-liner-js.deno.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image" content="/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="one-liner-js.deno.dev" />
+    <meta property="twitter:url" content="https://one-liner-js.deno.dev/" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/og.jpg" />
+
+    <link rel="stylesheet" href="/github-markdown.css" />
+  </head>
+  <body class="dark:bg-[#0d1117]">
+    <slot />
+
+    <footer class="w-full justify-center md:justify-end md:sticky bottom-0 flex gap-2 items-center p-4">
+      <a
+        href="https://github.com/probir-sarkar/one-liner-js"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub Repository"
+      >
+        <GitHubIcon />
+      </a>
+    </footer>
+  </body>
+</html>
